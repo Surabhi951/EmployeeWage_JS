@@ -1,5 +1,5 @@
-/*UC2
-Calculate daily employee wage based on part time or full time work
+/*UC3
+Refactor the Code to write a function to get work hours
 */
 const IS_PART_TIME = 1;
 const IS_FULL_TIME = 2;
@@ -7,21 +7,20 @@ const PART_TIME_HOURS = 4;
 const FULL_TIME_HOURS = 8;
 const WAGE_PER_HOUR = 20;
 
-let empHrs = 0;
-
-let empCheck = Math.floor(Math.random() * 10) % 3;
-
-switch(empCheck){
+//using function
+function getWorkingHrs(empCheck) {
+switch(empCheck) {
     case IS_PART_TIME:
-        empHrs = PART_TIME_HOURS;//empHrs = 4
-        break;
+        return PART_TIME_HOURS;
     case IS_FULL_TIME:
-        empHrs = FULL_TIME_HOURS;//empHrs = 8
-        break;
+        return FULL_TIME_HOURS;
     default:
-        empHrs = 0;    
+        return 0;    
+}
 }
 
+let empHrs = 0;//initialize variable
+let empCheck = Math.floor(Math.random() * 10) % 3;
+empHrs = getWorkingHrs(empCheck);//calling getWorkingHrs and store in empHrs
 let empWage = empHrs * WAGE_PER_HOUR;//calculating employee wage
-
 console.log("Emp Wage : " + empWage);//print empWage   
