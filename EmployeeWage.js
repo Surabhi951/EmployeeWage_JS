@@ -1,11 +1,12 @@
-/*UC3
-Refactor the Code to write a function to get work hours
+/*UC4
+Calculating wages for a month assuming 20 working days in a month
 */
 const IS_PART_TIME = 1;
 const IS_FULL_TIME = 2;
 const PART_TIME_HOURS = 4;
 const FULL_TIME_HOURS = 8;
 const WAGE_PER_HOUR = 20;
+const NO_OF_WORKING_DAYS = 2;
 
 //using function
 function getWorkingHrs(empCheck) {
@@ -20,7 +21,11 @@ switch(empCheck) {
 }
 
 let empHrs = 0;//initialize variable
-let empCheck = Math.floor(Math.random() * 10) % 3;
-empHrs = getWorkingHrs(empCheck);//calling getWorkingHrs and store in empHrs
+
+for(let day = 0; day < NO_OF_WORKING_DAYS; day++) {
+    let empCheck = Math.floor(Math.random() * 10) % 3;
+    empHrs += getWorkingHrs(empCheck);
+}
+
 let empWage = empHrs * WAGE_PER_HOUR;//calculating employee wage
-console.log("Emp Wage : " + empWage);//print empWage   
+console.log("Total Hrs : " + empHrs + "Emp Wage : " + empWage);//print Total hrs and empWage   
