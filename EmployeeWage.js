@@ -11,3 +11,4 @@ const IS_ABSENT = 0;
     } else {
         console.log("Employee is Present");
     }
+    
