@@ -6,7 +6,7 @@ const IS_FULL_TIME = 2;
 const PART_TIME_HOURS = 4;
 const FULL_TIME_HOURS = 8;
 const WAGE_PER_HOUR = 20;
-const NO_OF_WORKING_DAYS = 2;
+const NO_OF_WORKING_DAYS = 20;
 
 //using function
 function getWorkingHrs(empCheck) {
