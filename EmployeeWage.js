@@ -1,4 +1,5 @@
 /*
+UC1
 Ability to check employee present or absent
 */
 const IS_ABSENT = 0;
