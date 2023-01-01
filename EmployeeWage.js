@@ -1,6 +1,5 @@
-/*UC5
-Calculate Wages till a condition of total working hours of 160 or
-max days of 20 is reached for a month
+/*UC6
+Storing daily wage in a array
 */
 const IS_PART_TIME = 1;
 const IS_FULL_TIME = 2;
